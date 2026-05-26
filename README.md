@@ -50,7 +50,36 @@ Unlike traditional keyword-matching search engines, this system merges **Arabic 
 ├── 2. Term Frequency (TF) Calculation
 └── 3. Document Proximity Scoring
 │
+▼  
+[ Defuzzification & Ranking ] (Sorted Highest Weight to Lowest)
+│
 ▼
+[ Store in Cache + Render to UI ]## 📝 Sample Fuzzy Rule Set
+
+The internal knowledge-base utilizes linguistic rules (`IF-THEN`) to translate continuous quantitative metrics into exact document rankings:
+* **Rule 1:** **IF** *Title Match* is Full **AND** *Term Frequency* is High **AND** *Proximity to Beginning* is Very Close **THEN** *Document Relevance* is **Excellent (Top Rank)**.
+* **Rule 2:** **IF** *Title Match* is None **AND** *Term Frequency* is Medium **AND** *Proximity to Beginning* is Far **THEN** *Document Relevance* is **Low (Bottom Rank)**.
+
+---
+
+## 💻 Installation & Setup
+
+### Prerequisites
+* `.NET Runtime` compatible with the project environment.
+* A directory containing the target Arabic Word documents (.docx files) focused on marketing projects.
+
+### Setup Steps
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/your-username/arabic-fuzzy-ir-system.git](https://github.com/your-username/arabic-fuzzy-ir-system.git)
+Open the solution file (.sln) in Visual Studio.
+
+Configure the source documents directory path within the application configuration or code constants.
+
+Build and run the application (F5 or dotnet run).
+
+📄 License
+This project is licensed under the MIT License - see the file for full details.                                              
 [ Defuzzification & Ranking ] (Sorted Highest Weight to Lowest)
 │
 ▼
