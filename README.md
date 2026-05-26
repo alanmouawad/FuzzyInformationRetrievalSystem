@@ -1,20 +1,12 @@
 # Fuzzy Information Retrieval System
 An Arabic Information Retrieval desktop app in C# using Fuzzy Logic to rank Word documents on marketing. It features an Arabic stemmer, custom Stop Words filtering (e.g., prepositions), and a smart caching system for instant re-search results. Files are ranked based on title match, term frequency, and proximity to the document's beginning.
 
-# Writing a Python script to generate a high-quality Markdown README file in English for the project.
-
-readme_en_content = """# Arabic Information Retrieval System using Fuzzy Logic
 ### High-Performance Desktop Application for Marketing Document Indexing & Retrieval
-
----
 
 ## 📌 About the Project
 This project is an advanced, high-performance **C# Desktop Application** designed for intelligent Information Retrieval (IR) from Arabic Microsoft Word (.docx) documents specializing in the marketing domain. 
 
 Unlike traditional keyword-matching search engines, this system merges **Arabic Natural Language Processing (NLP)** with a custom **Fuzzy Inference System (FIS)**. It evaluates semantic relevance through approximate reasoning, matching words based on linguistic roots rather than literal text. The system features semantic stop-words filtering, structural text analysis, and an optimized caching engine ensuring sub-millisecond retrieval times for previously queried terms.
-
----
-
 ## 🚀 Key Features
 
 * **Advanced Arabic Stemming (NLP):** Integrates a morphological analyzer that strips search queries and document content down to their core Arabic roots (e.g., *تسويق*, *مسوّق*, *سوقنا* all map back to the root *س و ق*). This maximizes recall and handles the complex derivational nature of the Arabic language.
@@ -38,4 +30,29 @@ Unlike traditional keyword-matching search engines, this system merges **Arabic 
 ---
 
 ## 📐 System Architecture & Workflow
+[ User Input Query ]
+│
+▼
+[ Stop Words Filtering ] ───► (Is Stop Word?) ───► [ Alert: Invalid Query ]
+│ (Valid Semantic Word)
+▼
+[ Arabic Root Stemming ]
+│
+▼
+[ Cache Lookup Check ] ─────► (Hit / Found)  ───► [ Instant O(1) Display ]
+│ (Miss / New Root)
+▼
+[ Read & Parse Word Files ]
+│
+▼
+[ Fuzzy Logic Engine ]
+├── 1. Title Match Analytics
+├── 2. Term Frequency (TF) Calculation
+└── 3. Document Proximity Scoring
+│
+▼
+[ Defuzzification & Ranking ] (Sorted Highest Weight to Lowest)
+│
+▼
+[ Store in Cache + Render to UI ]
 
