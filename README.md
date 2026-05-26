@@ -71,7 +71,8 @@ The internal knowledge-base utilizes linguistic rules (`IF-THEN`) to translate c
 ### Setup Steps
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/arabic-fuzzy-ir-system.git](https://github.com/your-username/arabic-fuzzy-ir-system.git)
+   git clone [https://github.com/your-username/arabic-fuzzy-ir-system.git](https://github.com/alanmouawad/FuzzyInformationRetrievalSystem
+.git)
 Open the solution file (.sln) in Visual Studio.
 
 Configure the source documents directory path within the application configuration or code constants.
@@ -80,8 +81,6 @@ Build and run the application (F5 or dotnet run).
 
 📄 License
 This project is licensed under the MIT License - see the file for full details.                                              
-[ Defuzzification & Ranking ] (Sorted Highest Weight to Lowest)
-│
-▼
+
 [ Store in Cache + Render to UI ]
 
